@@ -12,6 +12,12 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
+.background-image-container {
+  background-image: url(https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.tor.com%2F2022%2F01%2F03%2Fnew-year-new-books-picking-what-to-read-next%2F&psig=AOvVaw1j1jYeSTBWwN_sKIoB2mqG&ust=1684059910871000&source=images&cd=vfe&ved=);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
 
 .App-header {
   background-color: #282c34;
