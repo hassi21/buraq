@@ -50,6 +50,47 @@ const About = () => {
           ></i>
         </div>
       </div>
+
+      <section className="text-gray-600 body-font">
+        <h1 className="bg-black p-8 text-center text-white text-4xl ">
+          MEET OUR TALENTED TEAM
+        </h1>
+        <div className="container bg-[#696969] px-5 bg- mx-auto">
+          <div className="flex flex-wrap pt-4 -mx-4 -mb-10 text-center">
+            <div className="sm:w-1/2 mb-10 px-4">
+              <div className="rounded-lg h-64 overflow-hidden">
+                <img
+                  alt="content"
+                  className="object-cover object-center h-full w-full"
+                  src="https://static.vecteezy.com/system/resources/previews/001/840/618/original/picture-profile-icon-male-icon-human-or-people-sign-and-symbol-free-vector.jpg    "
+                />
+              </div>
+              <h2 className="title-font text-2xl font-medium text-white mt-6 mb-3">
+                SABA MUQADDAS
+              </h2>
+              <p className="leading-relaxed text-white text-base">
+                EMAIl:Muqadassaba04@gmail.com <br /> CONTACT:03146804166
+              </p>
+            </div>
+            <div className="sm:w-1/2 mb-10 px-4">
+              <div className="rounded-lg h-64 overflow-hidden">
+                <img
+                  alt="content"
+                  className="object-cover object-center h-full w-full"
+                  src="https://static.vecteezy.com/system/resources/previews/001/840/618/original/picture-profile-icon-male-icon-human-or-people-sign-and-symbol-free-vector.jpg"
+                />
+              </div>
+              <h2 className="title-font text-2xl font-medium text-white mt-6 mb-3">
+                SYEDA UROOJ ZARA
+              </h2>
+              <p className="leading-relaxed text-white text-base">
+                EMAIL:Rooojizahra@gmail.com
+                <br /> CONTACT:031658677395
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 };
