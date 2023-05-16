@@ -1,7 +1,10 @@
 import React from "react";
+import Navbar from "./Navbar";
 const Contact = () => {
   return (
     <>
+      <Navbar />
+
       <div>
         <section className="text-gray-600 body-font relative">
           <div className="container px-5 py-24 mx-auto flex sm:flex-nowrap flex-wrap">

@@ -1,8 +1,11 @@
 import React from "react";
+import Navbar from "./Navbar";
 
 const About = () => {
   return (
     <div>
+      <Navbar />
+
       <h1 className=" bg-[#696969] text-4xl font-bold pt-8 pl-4">
         Our Priorities:
       </h1>

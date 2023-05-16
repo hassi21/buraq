@@ -1,9 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Navbar from "./Navbar";
 
 const Home = () => {
   return (
     <div>
+      <Navbar />
       <div
         style={{
           backgroundImage:
@@ -21,7 +23,7 @@ const Home = () => {
           Al-Buraq Printing Press
         </h1>
 
-        <div className=" flex justify-between items-center ml-[25%] mt-[5%] w-1/2 mx-2 my-4 text-primary">
+        <div className=" flex flex-wrap justify-between items-center ml-[25%] mt-[5%] w-1/2 mx-2 my-4 text-primary">
           <div>
             <Link to={"/Magazine"} className="mr-5 text-[#BDC8C9]">
               <div className="flex  flex-col justify-center items-center">

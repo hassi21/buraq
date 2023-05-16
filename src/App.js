@@ -18,7 +18,6 @@ function App() {
   return (
     <div>
       <Login />
-      <Navbar />
       <Routes>
         <Route path="/Home" element={<Home />} />
         <Route path="/About" element={<About />} />
