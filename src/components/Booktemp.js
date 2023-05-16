@@ -7,19 +7,19 @@ import Book4 from "./Book4";
 const Booktemp = () => {
   return (
     <div>
-      {/* <div>
+      <div>
         <h1 className="bg-[#696969] text-5xl text-black text-center">
           SOME BOOK COVERS
         </h1>
-      </div> */}
-      {/* <div className="w-[100%] flex justify-around bg-[#696969] amain ">
+      </div>
+      <div className="w-[100%] flex justify-around bg-[#696969] amain ">
         <div className="w-2/5 ml-8 a1">
           <Book1 />
         </div>
         <div className="w-2/5 pt-4 a2">
           <Book2 />
         </div>
-      </div> */}
+      </div>
       <div>
         <h1 className="bg-[#696969] text-5xl text-black text-center">
           SOME MAGAZINE COVERS
