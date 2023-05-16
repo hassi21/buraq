@@ -1,7 +1,12 @@
 import React from "react";
+import Businesstemp from "./Businesstemp";
 
 const Services = () => {
-  return <div></div>;
+  return (
+    <div>
+      <Businesstemp />
+    </div>
+  );
 };
 
 export default Services;

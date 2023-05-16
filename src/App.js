@@ -13,9 +13,11 @@ import Novels from "./components/Novels";
 import Broachers from "./components/Broachers";
 import Billing from "./components/Billing";
 import Whatsapp from "./components/Whatsapp";
+import Login from "./components/Login";
 function App() {
   return (
     <div>
+      <Login />
       <Navbar />
       <Routes>
         <Route path="/Home" element={<Home />} />
@@ -29,6 +31,7 @@ function App() {
         <Route path="/Poster" element={<Poster />} />
         <Route path="/Novels" element={<Novels />} />
         <Route path="/Broachers" element={<Broachers />} />
+        <Route path="/Login" element={<Login />} />
       </Routes>
     </div>
   );
