@@ -8,7 +8,7 @@ const Services = () => {
     <div>
       <Navbar />
 
-      {/* <Businesstemp /> */}
+      <Businesstemp />
       <Booktemp />
     </div>
   );
