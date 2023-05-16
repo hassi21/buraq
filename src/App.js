@@ -5,7 +5,6 @@ import Home from "./components/Home";
 import About from "./components/About";
 import Contact from "./components/Contact";
 import Services from "./components/Services";
-import Navbar from "./components/Navbar";
 import Magazine from "./components/Magazine";
 import Portfolio from "./components/Portfolio";
 import Poster from "./components/Poster";

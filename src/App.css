@@ -100,7 +100,7 @@
   .bwmain {
     display: flex;
     flex-direction: column;
-    justify-content: start;
+    justify-content: flex-start;
     align-items: center;
   }
   .b3 {
@@ -134,7 +134,7 @@
   .amain {
     display: flex;
     flex-direction: column;
-    justify-content: start;
+    justify-content: flex-start;
     align-items: center;
   }
   .a1 {
@@ -169,7 +169,7 @@
   .awmain {
     display: flex;
     flex-direction: column;
-    justify-content: start;
+    justify-content: flex-start;
     align-items: center;
   }
   .a3 {
