@@ -11,10 +11,13 @@ import b9 from "./../pictures/b9.jpeg";
 import b10 from "./../pictures/b10.jpeg";
 import b11 from "./../pictures/b11.jpeg";
 import b12 from "./../pictures/b12.jpeg";
+import Navbar from "./Navbar";
 
 const Broachers = () => {
   return (
     <div>
+      <Navbar />
+
       <div className="flex w-full mb-20 flex-wrap">
         <h1 className="sm:text-3xl text-2xl font-medium title-font text-gray-900 lg:w-1/3 lg:mb-0 mb-4">
           SOME OF OUR Broachers

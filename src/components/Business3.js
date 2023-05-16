@@ -1,99 +1,79 @@
 import React, { useState } from "react";
 
 const Business3 = () => {
-  const [text, setText] = useState("");
-  const [lastName, setLastName] = useState("");
-  const [designation, setDesignation] = useState("");
-  const [title, setTitle] = useState("");
-  const [email, setEmail] = useState("");
+  const [pool, setPool] = useState("");
+  const [party, setParty] = useState("");
+  const [location, setLocation] = useState("");
+  const [date, setDate] = useState("");
+  const [food, setFood] = useState("");
   const [phone, setPhone] = useState("");
-  const [adress, setAdress] = useState("");
-  const [social, setSocial] = useState("");
-  const [color, setColor] = useState("#FFFFFF");
+  const [freeMusic, setFreeMusic] = useState("");
+  const [dressCode, setDressCode] = useState("");
+  const [color, setColor] = useState("#000000");
 
   const handleTextChange = (event) => {
-    setText(event.target.value);
+    setPool(event.target.value);
   };
   const handleTextChangea = (event) => {
-    setLastName(event.target.value);
+    setParty(event.target.value);
   };
   const handleTextChangeb = (event) => {
-    setDesignation(event.target.value);
+    setLocation(event.target.value);
   };
   const handleTextChangec = (event) => {
-    setTitle(event.target.value);
+    setDate(event.target.value);
   };
   const handleTextChanged = (event) => {
-    setEmail(event.target.value);
+    setFood(event.target.value);
   };
   const handleTextChangee = (event) => {
     setPhone(event.target.value);
   };
   const handleTextChangef = (event) => {
-    setAdress(event.target.value);
+    setFreeMusic(event.target.value);
   };
   const handleTextChangeg = (event) => {
-    setSocial(event.target.value);
+    setDressCode(event.target.value);
   };
 
   const handleColorChange = (event) => {
     setColor(event.target.value);
   };
-  const handleColorChangea = (event) => {
-    setColor(event.target.value);
-  };
-  const handleColorChangeb = (event) => {
-    setColor(event.target.value);
-  };
-  const handleColorChangec = (event) => {
-    setColor(event.target.value);
-  };
-  const handleColorChanged = (event) => {
-    setColor(event.target.value);
-  };
-  const handleColorChangee = (event) => {
-    setColor(event.target.value);
-  };
-  const handleColorChangef = (event) => {
-    setColor(event.target.value);
-  };
-  const handleColorChangeg = (event) => {
-    setColor(event.target.value);
-  };
+
   const handleCapitalizeText = () => {
-    setText(text.toUpperCase());
+    setPool(pool.toUpperCase());
   };
 
   const handleEraseText = () => {
-    setText("");
+    setPool("");
   };
   const handleCapitalizeTexta = () => {
-    setLastName(lastName.toUpperCase());
+    setParty(party.toUpperCase());
   };
 
   const handleEraseTexta = () => {
-    setLastName("");
+    setParty("");
   };
   const handleCapitalizeTextb = () => {
-    setDesignation(designation.toUpperCase());
+    setLocation(location.toUpperCase());
   };
 
   const handleEraseTextb = () => {
-    setDesignation("");
+    setLocation("");
   };
   const handleCapitalizeTextc = () => {
-    setTitle(title.toUpperCase());
+    setDate(date.toUpperCase());
   };
 
   const handleEraseTextc = () => {
-    setTitle("");
+    setDate("");
   };
   const handleCapitalizeTextd = () => {
-    setEmail(email.toUpperCase());
+    setFood(food.toUpperCase());
   };
 
   const handleEraseTextd = () => {
-    setEmail("");
+    setFood("");
   };
   const handleCapitalizeTexte = () => {
     setPhone(phone.toUpperCase());
@@ -103,174 +83,178 @@ const Business3 = () => {
     setPhone("");
   };
   const handleCapitalizeTextf = () => {
-    setAdress(adress.toUpperCase());
+    setFreeMusic(freeMusic.toUpperCase());
   };
 
   const handleEraseTextf = () => {
-    setAdress("");
+    setFreeMusic("");
   };
   const handleCapitalizeTextg = () => {
-    setSocial(social.toUpperCase());
+    setDressCode(dressCode.toUpperCase());
   };
 
   const handleEraseTextg = () => {
-    setSocial("");
+    setDressCode("");
   };
   return (
     <div className="w-full">
       <div
         style={{
           backgroundImage:
-            'url("https://png.pngtree.com/thumb_back/fh260/back_our/20190623/ourmid/pngtree-black-business-atmosphere-business-card-background-image_239793.jpg")',
+            'url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWWPX0yplf83r-fY__j3rgMsRbLuPw4xBhm4-AwcwYkA&s")',
           backgroundSize: "cover",
           backgroundRepeat: "repeat",
-          height: "50vh",
+          height: "100%",
           width: "90%",
         }}
       >
         <div className="flex pt-6 pl-4  ">
-          <div style={{ color }}>
-            {text.length === 0 ? "ENTER FIRST NAME" : text}
+          <div style={{ color }}>{pool.length === 0 ? "POOL" : pool}</div>
+          <div style={{ color, marginLeft: "15px" }}>
+            {party.length === 0 ? "PARTY" : party}
           </div>
-          <div className="text-white ml-4" style={{ color }}>
-            {lastName.length === 0 ? "ENTER SECOND NAME" : lastName}
-          </div>
-          <div className="text-white font-extrabold ml-36" style={{ color }}>
-            {title.length === 0 ? "BUSINESS TITLE" : title}
+          <div style={{ color, marginLeft: "100px", fontWeight: "bolder" }}>
+            {date.length === 0 ? "CHOOSE DATE" : date}
           </div>
         </div>
-        <div className="text-white ml-4 mt-4" style={{ color }}>
-          {designation.length === 0 ? "DESIGNATION" : designation}
+        <div style={{ color, marginLeft: "20px", marginTop: "20px" }}>
+          {location.length === 0 ? "LOCATION" : location}
         </div>
-        <div className="text-white ml-4 mt-24" style={{ color }}>
-          {email.length === 0 ? "ENTER YOUR EMAIL" : email}
+        <div style={{ color, marginLeft: "20px", marginTop: "104px" }}>
+          {food.length === 0 ? "ENTER YOUR FOOD" : food}
         </div>
-        <div className="text-white ml-4 mt-4" style={{ color }}>
+        <div style={{ color, marginLeft: "20px", marginTop: "20px" }}>
           {phone.length === 0 ? "ENTER YOUR PHONE:NO" : phone}
         </div>
-        <div className="text-white ml-4 mt-4" style={{ color }}>
-          {adress.length === 0 ? "ADRESS:" : adress}
+        <div style={{ color, marginLeft: "20px", marginTop: "20px" }}>
+          {freeMusic.length === 0 ? "WE OFFER FREE MUSIC" : freeMusic}
         </div>
-        <div className="text-white ml-4 mt-4" style={{ color }}>
-          {social.length === 0 ? "SOCIAL LINKS" : social}
+        <div style={{ color, marginLeft: "20px", marginTop: "20px" }}>
+          {dressCode.length === 0 ? "ENTER YOUR Dress Code " : dressCode}
         </div>
       </div>
-      <div className="flex">
-        <div>
-          <div>
-            <label htmlFor="text-input">Enter text:</label>
+      <div>
+        <div className="bw4">
+          <div className="">
             <input
+              className="w-1/2"
               type="text"
+              placeholder="Enter Text"
               id="text-input"
-              value={text}
+              value={pool}
               onChange={handleTextChange}
             />
 
             <button
               onClick={handleCapitalizeText}
-              className="bg-[#696969] ml-3 border border-red-600 p-1"
+              className="bg-[#696969] text-black ml-3 "
             >
               Capitalize Text
             </button>
             <button
               onClick={handleEraseText}
-              className="bg-[#696969] ml-3 border border-red-600 p-1"
+              className="bg-[#696969]  ml-3 text-black "
             >
               Erase Text
             </button>
           </div>
           <div>
-            <label htmlFor="text-input">Enter text:</label>
             <input
+              className="w-1/2"
               type="text"
+              placeholder="Enter Text"
               id="text-input"
-              value={lastName}
+              value={party}
               onChange={handleTextChangea}
             />
 
             <button
               onClick={handleCapitalizeTexta}
-              className="bg-[#696969] ml-3 border border-red-600 p-1"
+              className="bg-[#696969]  ml-3 text-black "
             >
               Capitalize Text
             </button>
             <button
               onClick={handleEraseTexta}
-              className="bg-[#696969] ml-3 border border-red-600 p-1"
+              className="bg-[#696969]  ml-3 text-black "
             >
               Erase Text
             </button>
           </div>
           <div>
-            <label htmlFor="text-input">Enter text:</label>
             <input
+              className="w-1/2"
               type="text"
+              placeholder="Enter Text"
               id="text-input"
-              value={designation}
+              value={location}
               onChange={handleTextChangeb}
             />
 
             <button
               onClick={handleCapitalizeTextb}
-              className="bg-[#696969] ml-3 border border-red-600 p-1"
+              className="bg-[#696969]  ml-3 text-black "
             >
               Capitalize Text
             </button>
             <button
               onClick={handleEraseTextb}
-              className="bg-[#696969] ml-3 border border-red-600 p-1"
+              className="bg-[#696969]  ml-3 text-black "
             >
               Erase Text
             </button>
           </div>
           <div>
-            <label htmlFor="text-input">Enter text:</label>
             <input
-              type="text"
+              className="w-1/2"
+              type="date"
+              placeholder="Enter Text"
               id="text-input"
-              value={title}
+              value={date}
               onChange={handleTextChangec}
             />
 
             <button
               onClick={handleCapitalizeTextc}
-              className="bg-[#696969] ml-3 border border-red-600 p-1"
+              className="bg-[#696969]  ml-3 text-black "
             >
               Capitalize Text
             </button>
             <button
               onClick={handleEraseTextc}
-              className="bg-[#696969] ml-3 border border-red-600 p-1"
+              className="bg-[#696969]  ml-3 text-black "
             >
               Erase Text
             </button>
           </div>
           <div>
-            <label htmlFor="text-input">Enter text:</label>
             <input
+              className="w-1/2"
               type="text"
+              placeholder="Enter Text"
               id="text-input"
-              value={email}
+              value={food}
               onChange={handleTextChanged}
             />
 
             <button
               onClick={handleCapitalizeTextd}
-              className="bg-[#696969] ml-3 border border-red-600 p-1"
+              className="bg-[#696969]  ml-3 text-black "
             >
               Capitalize Text
             </button>
             <button
               onClick={handleEraseTextd}
-              className="bg-[#696969] ml-3 border border-red-600 p-1"
+              className="bg-[#696969]  ml-3 text-black "
             >
               Erase Text
             </button>
           </div>
           <div>
-            <label htmlFor="text-input">Enter text:</label>
             <input
+              className="w-1/2"
               type="text"
+              placeholder="Enter Text"
               id="text-input"
               value={phone}
               onChange={handleTextChangee}
@@ -278,65 +262,70 @@ const Business3 = () => {
 
             <button
               onClick={handleCapitalizeTexte}
-              className="bg-[#696969] ml-3 border border-red-600 p-1"
+              className="bg-[#696969]  ml-3 text-black "
             >
               Capitalize Text
             </button>
             <button
               onClick={handleEraseTexte}
-              className="bg-[#696969] ml-3 border border-red-600 p-1"
+              className="bg-[#696969]  ml-3 text-black "
             >
               Erase Text
             </button>
           </div>
           <div>
-            <label htmlFor="text-input">Enter text:</label>
             <input
+              className="w-1/2"
               type="text"
+              placeholder="Enter Text"
               id="text-input"
-              value={adress}
+              value={freeMusic}
               onChange={handleTextChangef}
             />
 
             <button
               onClick={handleCapitalizeTextf}
-              className="bg-[#696969] ml-3 border border-red-600 p-1"
+              className="bg-[#696969]  ml-3 text-black "
             >
               Capitalize Text
             </button>
             <button
               onClick={handleEraseTextf}
-              className="bg-[#696969] ml-3 border border-red-600 p-1"
+              className="bg-[#696969]  ml-3 text-black "
             >
               Erase Text
             </button>
           </div>
           <div>
-            <label htmlFor="text-input">Enter text:</label>
             <input
+              className="w-1/2"
               type="text"
+              placeholder="Enter Text"
               id="text-input"
-              value={social}
+              value={dressCode}
               onChange={handleTextChangeg}
             />
 
             <button
               onClick={handleCapitalizeTextg}
-              className="bg-[#696969] ml-3 border border-red-600 p-1"
+              className="bg-[#696969]  ml-3 text-black "
             >
               Capitalize Text
             </button>
             <button
               onClick={handleEraseTextg}
-              className="bg-[#696969] ml-3 border border-red-600 p-1"
+              className="bg-[#696969]  ml-3 text-black "
             >
               Erase Text
             </button>
           </div>
         </div>
-        <div className="ml-4 p-6">
+        <div className="ml-4 p-8 flex">
+          <p className="text-2xl mr-5 text-black  ">
+            change the color theme of card
+          </p>
           <input type="color" id="color-picker" onChange={handleColorChange} />
-        </div>
+        </div>{" "}
       </div>
     </div>
   );

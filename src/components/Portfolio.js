@@ -5,10 +5,13 @@ import card4 from "./../pictures/card4.jpg";
 import c1 from "./../pictures/c1.jpg";
 import c2 from "./../pictures/c2.jpg";
 import c3 from "./../pictures/c3.jpg";
+import Navbar from "./Navbar";
 
 const Portfolio = () => {
   return (
     <div>
+      <Navbar />
+
       <section className="text-gray-600 body-font">
         <div className="  container  mx-auto">
           <h1 className="bg-[#696969] p-4 text-white text-3xl text-center">
