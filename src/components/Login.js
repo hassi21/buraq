@@ -4,100 +4,102 @@ import { Link } from "react-router-dom";
 const Login = () => {
   const [isLoginVisible, setIsLoginVisible] = useState(true);
 
-  const handleSignupButtonClick = () => {
+  const handleLoginButtonClick = () => {
     setIsLoginVisible(false);
   };
   return (
     <div>
       {isLoginVisible && (
-        <section className="bg-gray-50 dark:bg-gray-900">
-          <div className="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
-            <a
-              href="/"
-              className="flex items-center mb-6 text-2xl font-semibold text-gray-900 dark:text-white"
-            >
-              <img className="w-8 h-8 mr-2" src={lg} alt="logo" />
-              ALBURAQ
-            </a>
-            <div className="w-full bg-white rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700">
-              <div className="p-6 space-y-4 md:space-y-6 sm:p-8">
-                <h1 className="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white">
-                  Sign in to your account
-                </h1>
-                <form className="space-y-4 md:space-y-6" action="#">
-                  <div>
-                    <label
-                      for="email"
-                      className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                    >
-                      Your email
-                    </label>
-                    <input
-                      type="email"
-                      name="email"
-                      id="email"
-                      className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                      placeholder="name@company.com"
-                      required=""
-                    />
-                  </div>
-                  <div>
-                    <label
-                      for="password"
-                      className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                    >
-                      Password
-                    </label>
-                    <input
-                      type="password"
-                      name="password"
-                      id="password"
-                      placeholder="••••••••"
-                      className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                      required=""
-                    />
-                  </div>
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-start">
-                      <div className="flex items-center h-5">
-                        <input
-                          id="remember"
-                          aria-describedby="remember"
-                          type="checkbox"
-                          className="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-primary-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-primary-600 dark:ring-offset-gray-800"
-                          required=""
-                        />
-                      </div>
-                      <div className="ml-3 text-sm">
-                        <label
-                          for="remember"
-                          className="text-gray-500 dark:text-gray-300"
-                        >
-                          Remember me
-                        </label>
+        <section
+          className="h-100 gradient-form"
+          style={{ backgroundColor: "#eee" }}
+        >
+          <div className="container py-5 h-100">
+            <div className="row d-flex justify-content-center align-items-center h-100">
+              <div className="col-xl-10">
+                <div className="card rounded-3 text-black">
+                  <div className="row g-0">
+                    <div className="col-lg-6">
+                      <div className="card-body p-md-5 mx-md-4">
+                        <div className="text-center">
+                          <img src={lg} style={{ width: "185px" }} alt="logo" />
+                          <h4 className="mt-1 mb-5 pb-1">
+                            We are The Lotus Team
+                          </h4>
+                        </div>
+
+                        <form>
+                          <p>Please login to your account</p>
+
+                          <div className="form-outline mb-4">
+                            <input
+                              type="email"
+                              id="form2Example11"
+                              className="form-control"
+                              placeholder="Phone number or email address"
+                            />
+                            <label className="form-label" for="form2Example11">
+                              Username
+                            </label>
+                          </div>
+
+                          <div className="form-outline mb-4">
+                            <input
+                              type="password"
+                              id="form2Example22"
+                              className="form-control"
+                            />
+                            <label className="form-label" for="form2Example22">
+                              Password
+                            </label>
+                          </div>
+
+                          <div className="text-center pt-1 mb-5 pb-1">
+                            <Link to={"/Home"}>
+                              <button
+                                onClick={handleLoginButtonClick}
+                                className="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3"
+                                type="button"
+                              >
+                                Log in
+                              </button>
+                            </Link>
+                            <a className="text-muted" href="#!">
+                              Forgot password?
+                            </a>
+                          </div>
+
+                          <div className="d-flex align-items-center justify-content-center pb-4">
+                            <p className="mb-0 me-2">Don't have an account?</p>
+                            <Link to={"/Signup"}>
+                              <button
+                                onClick={handleLoginButtonClick}
+                                type="button"
+                                className="btn btn-outline-danger"
+                              >
+                                Create new
+                              </button>
+                            </Link>
+                          </div>
+                        </form>
                       </div>
                     </div>
-                    <a
-                      href="/"
-                      className="text-sm font-medium text-primary-600 hover:underline dark:text-primary-500"
-                    >
-                      Forgot password?
-                    </a>
+                    <div className="col-lg-6 d-flex align-items-center gradient-custom-2">
+                      <div className="text-white px-3 py-4 p-md-5 mx-md-4">
+                        <h4 className="mb-4">
+                          We are more than just a company
+                        </h4>
+                        <p className="small mb-0">
+                          Lorem ipsum dolor sit amet, consectetur adipisicing
+                          elit, sed do eiusmod tempor incididunt ut labore et
+                          dolore magna aliqua. Ut enim ad minim veniam, quis
+                          nostrud exercitation ullamco laboris nisi ut aliquip
+                          ex ea commodo consequat.
+                        </p>
+                      </div>
+                    </div>
                   </div>
-
-                  <Link
-                    to={"/Home"}
-                    className="font-medium text-primary-600 hover:underline dark:text-primary-500"
-                  >
-                    <button
-                      type="submit"
-                      onClick={handleSignupButtonClick}
-                      className="w-full text-white bg-primary-600 hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
-                    >
-                      Sign ins
-                    </button>
-                  </Link>
-                </form>
+                </div>
               </div>
             </div>
           </div>

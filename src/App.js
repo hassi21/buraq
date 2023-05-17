@@ -14,6 +14,7 @@ import Billing from "./components/Billing";
 import Whatsapp from "./components/Whatsapp";
 import Login from "./components/Login";
 import Logout from "./components/Logout";
+import Signup from "./components/Signup";
 function App() {
   return (
     <div>
@@ -32,6 +33,7 @@ function App() {
         <Route path="/Broachers" element={<Broachers />} />
         <Route path="/Login" element={<Login />} />
         <Route path={"/Logout"} element={<Logout />} />
+        <Route path={"/Signup"} element={<Signup />} />
       </Routes>
     </div>
   );
