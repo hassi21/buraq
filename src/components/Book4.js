@@ -63,18 +63,40 @@ const Book4 = () => {
   const handleEraseTextg = () => {
     setProducer("");
   };
+  const [backgroundImage, setBackgroundImage] = useState(
+    "https://marketplace.canva.com/EADapL3Fb1A/1/0/1236w/canva-nordic-nature-travel-magazine-aSVeFiPukps.jpg"
+  );
+
+  const handleSelectChange = (event) => {
+    const selectedUrl = event.target.value;
+    setBackgroundImage(selectedUrl);
+  };
+
   return (
     <div className="w-full">
       <div
         style={{
-          backgroundImage:
-            'url("https://marketplace.canva.com/EADapL3Fb1A/1/0/1236w/canva-nordic-nature-travel-magazine-aSVeFiPukps.jpg")',
+          backgroundImage: `url(${backgroundImage})`,
           backgroundSize: "cover",
           backgroundRepeat: "repeat",
           height: "100%",
           width: "100%",
         }}
       >
+        <select onChange={handleSelectChange}>
+          <option value="https://marketplace.canva.com/EADapL3Fb1A/1/0/1236w/canva-nordic-nature-travel-magazine-aSVeFiPukps.jpg">
+            Initial Background
+          </option>
+          <option value="https://i.pinimg.com/originals/13/2d/ff/132dff0e9767b7ae0f478e3b02d532fa.png">
+            Background 1
+          </option>
+          <option value="https://png.pngtree.com/thumb_back/fh260/back_our/20190623/ourmid/pngtree-black-business-atmosphere-business-card-background-image_239793.jpg">
+            Background 2
+          </option>
+          <option value="https://i.pinimg.com/originals/13/2d/ff/132dff0e9767b7ae0f478e3b02d532fa.png">
+            Background 3
+          </option>
+        </select>
         <div className=" pt-6 pl-4  ">
           <div
             style={{

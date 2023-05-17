@@ -10,7 +10,7 @@ import pos8 from "./../pictures/pos8.jpeg";
 import pos9 from "./../pictures/pos9.jpeg";
 import pos10 from "./../pictures/pos10.jpeg";
 import pos11 from "./../pictures/pos11.jpeg";
-import pos12 from "./../pictures/pos12.jpeg";
+import pos12 from "./../pictures/pos12.jpg";
 import Navbar from "./Navbar";
 const Poster = () => {
   return (

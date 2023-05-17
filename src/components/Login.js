@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import lg from "./../pictures/lg.jpg";
+import lg from "./../pictures/lg.png";
 import { Link } from "react-router-dom";
 const Login = () => {
   const [isLoginVisible, setIsLoginVisible] = useState(true);

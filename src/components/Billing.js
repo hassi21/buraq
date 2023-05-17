@@ -1,7 +1,6 @@
 import React from "react";
 import Whatsapp from "./Whatsapp";
 import Navbar from "./Navbar";
-
 const Billing = () => {
   return (
     <div>

@@ -96,18 +96,40 @@ const Business4 = () => {
   const handleEraseTextg = () => {
     setDressCode("");
   };
+  const [backgroundImage, setBackgroundImage] = useState(
+    "https://png.pngtree.com/background/20210715/original/pngtree-music-event-poster-template-with-abstract-shapes-picture-image_1300053.jpg"
+  );
+
+  const handleSelectChange = (event) => {
+    const selectedUrl = event.target.value;
+    setBackgroundImage(selectedUrl);
+  };
+
   return (
     <div className="w-full">
       <div
         style={{
-          backgroundImage:
-            'url("https://png.pngtree.com/background/20210715/original/pngtree-music-event-poster-template-with-abstract-shapes-picture-image_1300053.jpg")',
+          backgroundImage: `url(${backgroundImage})`,
           backgroundSize: "cover",
           backgroundRepeat: "repeat",
           height: "100%",
           width: "90%",
         }}
       >
+        <select onChange={handleSelectChange}>
+          <option value="https://png.pngtree.com/background/20210715/original/pngtree-music-event-poster-template-with-abstract-shapes-picture-image_1300053.jpg">
+            Initial Background
+          </option>
+          <option value="https://i.pinimg.com/originals/13/2d/ff/132dff0e9767b7ae0f478e3b02d532fa.png">
+            Background 1
+          </option>
+          <option value="https://png.pngtree.com/thumb_back/fh260/back_our/20190623/ourmid/pngtree-black-business-atmosphere-business-card-background-image_239793.jpg">
+            Background 2
+          </option>
+          <option value="https://i.pinimg.com/originals/13/2d/ff/132dff0e9767b7ae0f478e3b02d532fa.png">
+            Background 3
+          </option>
+        </select>
         <div className="flex pt-6 pl-4  ">
           <div style={{ color, fontWeight: "bolder" }}>
             {music.length === 0 ? "MUSIC" : music}

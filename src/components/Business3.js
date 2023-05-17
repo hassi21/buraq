@@ -96,18 +96,40 @@ const Business3 = () => {
   const handleEraseTextg = () => {
     setDressCode("");
   };
+  const [backgroundImage, setBackgroundImage] = useState(
+    "https://i.pinimg.com/736x/07/ce/e6/07cee6b16fd091a49721bc82fd3d981d.jpg"
+  );
+
+  const handleSelectChange = (event) => {
+    const selectedUrl = event.target.value;
+    setBackgroundImage(selectedUrl);
+  };
+
   return (
     <div className="w-full">
       <div
         style={{
-          backgroundImage:
-            'url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWWPX0yplf83r-fY__j3rgMsRbLuPw4xBhm4-AwcwYkA&s")',
+          backgroundImage: `url(${backgroundImage})`,
           backgroundSize: "cover",
           backgroundRepeat: "repeat",
           height: "100%",
           width: "90%",
         }}
       >
+        <select onChange={handleSelectChange}>
+          <option value="https://i.pinimg.com/736x/07/ce/e6/07cee6b16fd091a49721bc82fd3d981d.jpg">
+            Initial Background
+          </option>
+          <option value="https://i.pinimg.com/originals/13/2d/ff/132dff0e9767b7ae0f478e3b02d532fa.png">
+            Background 1
+          </option>
+          <option value="https://png.pngtree.com/thumb_back/fh260/back_our/20190623/ourmid/pngtree-black-business-atmosphere-business-card-background-image_239793.jpg">
+            Background 2
+          </option>
+          <option value="https://i.pinimg.com/originals/13/2d/ff/132dff0e9767b7ae0f478e3b02d532fa.png">
+            Background 3
+          </option>
+        </select>
         <div className="flex pt-6 pl-4  ">
           <div style={{ color }}>{pool.length === 0 ? "POOL" : pool}</div>
           <div style={{ color, marginLeft: "15px" }}>
