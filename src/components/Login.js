@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import lg from "./../pictures/lg.jpg";
+import lg from "../pictures/lg.png";
 import { Link, useNavigate } from "react-router-dom";
 // import { Link, } from "react-router-dom";
 import { isLogin, login } from "../services/api/userAuth";
@@ -108,23 +108,21 @@ const Login = () => {
                         </label>
                       </div>
                     </div>
-                    <a
-                      href="/"
-                      className="text-sm font-medium text-primary-600 hover:underline dark:text-primary-500"
-                    >
-                      Forgot password?
-                    </a>
                   </div>
                   <div className="flex items-center justify-between">
                     <div className="flex items-start">
                       <div className="ml-3 text-sm"></div>
                     </div>
+
+                    <Link to="/Signup">
+                    
                     <a
-                      href="/register"
+                      
                       className="text-sm font-medium text-primary-600 hover:underline dark:text-primary-500"
                     >
                       Register?
                     </a>
+                    </Link>
                   </div>
 
                   {/* <Link

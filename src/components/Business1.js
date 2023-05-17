@@ -39,27 +39,7 @@ const Business1 = () => {
   const handleColorChange = (event) => {
     setColor(event.target.value);
   };
-  const handleColorChangea = (event) => {
-    setColor(event.target.value);
-  };
-  const handleColorChangeb = (event) => {
-    setColor(event.target.value);
-  };
-  const handleColorChangec = (event) => {
-    setColor(event.target.value);
-  };
-  const handleColorChanged = (event) => {
-    setColor(event.target.value);
-  };
-  const handleColorChangee = (event) => {
-    setColor(event.target.value);
-  };
-  const handleColorChangef = (event) => {
-    setColor(event.target.value);
-  };
-  const handleColorChangeg = (event) => {
-    setColor(event.target.value);
-  };
+
   const handleCapitalizeText = () => {
     setText(text.toUpperCase());
   };
@@ -116,51 +96,72 @@ const Business1 = () => {
   const handleEraseTextg = () => {
     setSocial("");
   };
+  const [backgroundImage, setBackgroundImage] = useState(
+    "https://png.pngtree.com/thumb_back/fh260/back_our/20190623/ourmid/pngtree-black-business-atmosphere-business-card-background-image_239793.jpg"
+  );
+
+  const handleSelectChange = (event) => {
+    const selectedUrl = event.target.value;
+    setBackgroundImage(selectedUrl);
+  };
+
   return (
     <div className="w-full">
       <div
         style={{
-          backgroundImage:
-            'url("https://png.pngtree.com/thumb_back/fh260/back_our/20190623/ourmid/pngtree-black-business-atmosphere-business-card-background-image_239793.jpg")',
+          backgroundImage: `url(${backgroundImage})`,
           backgroundSize: "cover",
           backgroundRepeat: "repeat",
-          height: "50vh",
+          height: "100%",
           width: "90%",
         }}
       >
+        <select onChange={handleSelectChange}>
+          <option value="https://png.pngtree.com/thumb_back/fh260/back_our/20190623/ourmid/pngtree-black-business-atmosphere-business-card-background-image_239793.jpg">
+            Initial Background
+          </option>
+          <option value="https://i.pinimg.com/originals/13/2d/ff/132dff0e9767b7ae0f478e3b02d532fa.png">
+            Background 1
+          </option>
+          <option value="https://png.pngtree.com/thumb_back/fh260/back_our/20190623/ourmid/pngtree-black-business-atmosphere-business-card-background-image_239793.jpg">
+            Background 2
+          </option>
+          <option value="https://i.pinimg.com/originals/13/2d/ff/132dff0e9767b7ae0f478e3b02d532fa.png">
+            Background 3
+          </option>
+        </select>
         <div className="flex pt-6 pl-4  ">
-          <div style={{ color }}>
-            {text.length === 0 ? "ENTER FIRST NAME" : text}
+          <div style={{ color }}>{text.length === 0 ? "FNAME" : text}</div>
+          <div style={{ color, marginLeft: "15px" }}>
+            {lastName.length === 0 ? "LNAME" : lastName}
           </div>
-          <div className="text-white ml-4" style={{ color }}>
-            {lastName.length === 0 ? "ENTER SECOND NAME" : lastName}
-          </div>
-          <div className="text-white font-extrabold ml-36" style={{ color }}>
+          <div style={{ color, marginLeft: "104px", fontWeight: "bolder" }}>
             {title.length === 0 ? "BUSINESS TITLE" : title}
           </div>
         </div>
-        <div className="text-white ml-4 mt-4" style={{ color }}>
+        <div style={{ color, marginLeft: "20px", marginTop: "20px" }}>
           {designation.length === 0 ? "DESIGNATION" : designation}
         </div>
-        <div className="text-white ml-4 mt-24" style={{ color }}>
+        <div style={{ color, marginLeft: "20px", marginTop: "104px" }}>
           {email.length === 0 ? "ENTER YOUR EMAIL" : email}
         </div>
-        <div className="text-white ml-4 mt-4" style={{ color }}>
+        <div style={{ color, marginLeft: "20px", marginTop: "20px" }}>
           {phone.length === 0 ? "ENTER YOUR PHONE:NO" : phone}
         </div>
-        <div className="text-white ml-4 mt-4" style={{ color }}>
+        <div style={{ color, marginLeft: "20px", marginTop: "20px" }}>
           {adress.length === 0 ? "ADRESS:" : adress}
         </div>
-        <div className="text-white ml-4 mt-4" style={{ color }}>
+        <div style={{ color, marginLeft: "20px", marginTop: "20px" }}>
           {social.length === 0 ? "SOCIAL LINKS" : social}
         </div>
       </div>
-      <div className="flex">
-        <div>
-          <div>
-            <label htmlFor="text-input">Enter text:</label>
+      <div>
+        <div className="bw1">
+          <div className="">
             <input
+              className="w-1/2"
               type="text"
+              placeholder="Enter Text"
               id="text-input"
               value={text}
               onChange={handleTextChange}
@@ -168,21 +169,22 @@ const Business1 = () => {
 
             <button
               onClick={handleCapitalizeText}
-              className="bg-[#696969] ml-3 border border-red-600 p-1"
+              className="bg-[#696969] text-black "
             >
               Capitalize Text
             </button>
             <button
               onClick={handleEraseText}
-              className="bg-[#696969] ml-3 border border-red-600 p-1"
+              className="bg-[#696969]  ml-3 text-black "
             >
               Erase Text
             </button>
           </div>
           <div>
-            <label htmlFor="text-input">Enter text:</label>
             <input
+              className="w-1/2"
               type="text"
+              placeholder="Enter Text"
               id="text-input"
               value={lastName}
               onChange={handleTextChangea}
@@ -190,21 +192,22 @@ const Business1 = () => {
 
             <button
               onClick={handleCapitalizeTexta}
-              className="bg-[#696969] ml-3 border border-red-600 p-1"
+              className="bg-[#696969]  ml-3 text-black "
             >
               Capitalize Text
             </button>
             <button
               onClick={handleEraseTexta}
-              className="bg-[#696969] ml-3 border border-red-600 p-1"
+              className="bg-[#696969]  ml-3 text-black "
             >
               Erase Text
             </button>
           </div>
           <div>
-            <label htmlFor="text-input">Enter text:</label>
             <input
+              className="w-1/2"
               type="text"
+              placeholder="Enter Text"
               id="text-input"
               value={designation}
               onChange={handleTextChangeb}
@@ -212,21 +215,22 @@ const Business1 = () => {
 
             <button
               onClick={handleCapitalizeTextb}
-              className="bg-[#696969] ml-3 border border-red-600 p-1"
+              className="bg-[#696969]  ml-3 text-black "
             >
               Capitalize Text
             </button>
             <button
               onClick={handleEraseTextb}
-              className="bg-[#696969] ml-3 border border-red-600 p-1"
+              className="bg-[#696969]  ml-3 text-black "
             >
               Erase Text
             </button>
           </div>
           <div>
-            <label htmlFor="text-input">Enter text:</label>
             <input
+              className="w-1/2"
               type="text"
+              placeholder="Enter Text"
               id="text-input"
               value={title}
               onChange={handleTextChangec}
@@ -234,21 +238,22 @@ const Business1 = () => {
 
             <button
               onClick={handleCapitalizeTextc}
-              className="bg-[#696969] ml-3 border border-red-600 p-1"
+              className="bg-[#696969]  ml-3 text-black "
             >
               Capitalize Text
             </button>
             <button
               onClick={handleEraseTextc}
-              className="bg-[#696969] ml-3 border border-red-600 p-1"
+              className="bg-[#696969]  ml-3 text-black "
             >
               Erase Text
             </button>
           </div>
           <div>
-            <label htmlFor="text-input">Enter text:</label>
             <input
+              className="w-1/2"
               type="text"
+              placeholder="Enter Text"
               id="text-input"
               value={email}
               onChange={handleTextChanged}
@@ -256,21 +261,22 @@ const Business1 = () => {
 
             <button
               onClick={handleCapitalizeTextd}
-              className="bg-[#696969] ml-3 border border-red-600 p-1"
+              className="bg-[#696969]  ml-3 text-black "
             >
               Capitalize Text
             </button>
             <button
               onClick={handleEraseTextd}
-              className="bg-[#696969] ml-3 border border-red-600 p-1"
+              className="bg-[#696969]  ml-3 text-black "
             >
               Erase Text
             </button>
           </div>
           <div>
-            <label htmlFor="text-input">Enter text:</label>
             <input
+              className="w-1/2"
               type="text"
+              placeholder="Enter Text"
               id="text-input"
               value={phone}
               onChange={handleTextChangee}
@@ -278,21 +284,22 @@ const Business1 = () => {
 
             <button
               onClick={handleCapitalizeTexte}
-              className="bg-[#696969] ml-3 border border-red-600 p-1"
+              className="bg-[#696969]  ml-3 text-black "
             >
               Capitalize Text
             </button>
             <button
               onClick={handleEraseTexte}
-              className="bg-[#696969] ml-3 border border-red-600 p-1"
+              className="bg-[#696969]  ml-3 text-black "
             >
               Erase Text
             </button>
           </div>
           <div>
-            <label htmlFor="text-input">Enter text:</label>
             <input
+              className="w-1/2"
               type="text"
+              placeholder="Enter Text"
               id="text-input"
               value={adress}
               onChange={handleTextChangef}
@@ -300,21 +307,22 @@ const Business1 = () => {
 
             <button
               onClick={handleCapitalizeTextf}
-              className="bg-[#696969] ml-3 border border-red-600 p-1"
+              className="bg-[#696969]  ml-3 text-black "
             >
               Capitalize Text
             </button>
             <button
               onClick={handleEraseTextf}
-              className="bg-[#696969] ml-3 border border-red-600 p-1"
+              className="bg-[#696969]  ml-3 text-black "
             >
               Erase Text
             </button>
           </div>
           <div>
-            <label htmlFor="text-input">Enter text:</label>
             <input
+              className="w-1/2"
               type="text"
+              placeholder="Enter Text"
               id="text-input"
               value={social}
               onChange={handleTextChangeg}
@@ -322,19 +330,22 @@ const Business1 = () => {
 
             <button
               onClick={handleCapitalizeTextg}
-              className="bg-[#696969] ml-3 border border-red-600 p-1"
+              className="bg-[#696969]  ml-3 text-black "
             >
               Capitalize Text
             </button>
             <button
               onClick={handleEraseTextg}
-              className="bg-[#696969] ml-3 border border-red-600 p-1"
+              className="bg-[#696969]  ml-3 text-black "
             >
               Erase Text
             </button>
           </div>
         </div>
-        <div className="ml-4 p-6">
+        <div className="ml-4 p-8 flex">
+          <p className="text-2xl mr-5 text-black  ">
+            change the color theme of card
+          </p>
           <input type="color" id="color-picker" onChange={handleColorChange} />
         </div>
       </div>

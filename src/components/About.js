@@ -6,7 +6,7 @@ const About = () => {
     <div>
       <Navbar />
 
-      <h1 className=" bg-[#696969] text-4xl font-bold pt-8 pl-4">
+      <h1 className=" bg-[#696969] text-white text-4xl font-bold pt-8 pl-4">
         Our Priorities:
       </h1>
       <div className="flex bg-[#696969] text-center font-semibold pt-8 pb-4 justify-around">
@@ -17,7 +17,7 @@ const About = () => {
           ></i>
         </div>
         <div>
-          <h1 className="bg-[#696969] text-center font-extrabold pt-3 pb-4">
+          <p className="bg-[#696969] text-center text-white font-extrabold pt-3 pb-4">
             Welcome to our printing press! We are a team of skilled
             professionals <br />
             who are dedicated to providing high-quality printing services for
@@ -44,7 +44,7 @@ const About = () => {
             our clients. Contact us today to discuss your printing needs and let
             <br />
             us help you achieve your goals!
-          </h1>
+          </p>
         </div>
         <div className="pr-[10%] mt-[15%]">
           <i

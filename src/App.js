@@ -5,7 +5,6 @@ import Home from "./components/Home";
 import About from "./components/About";
 import Contact from "./components/Contact";
 import Services from "./components/Services";
-import Navbar from "./components/Navbar";
 import Magazine from "./components/Magazine";
 import Portfolio from "./components/Portfolio";
 import Poster from "./components/Poster";
@@ -14,6 +13,10 @@ import Broachers from "./components/Broachers";
 import Billing from "./components/Billing";
 import Whatsapp from "./components/Whatsapp";
 import Login from "./components/Login";
+import Logout from "./components/Logout";
+import Signup from "./components/Signup";
+import Paydet from "./components/Paydet";
+import Paymentsmethod from "./components/Paymentsmethod";
 function App() {
   return (
     <div>
@@ -31,6 +34,10 @@ function App() {
         <Route path="/Novels" element={<Novels />} />
         <Route path="/Broachers" element={<Broachers />} />
         <Route path="/Login" element={<Login />} />
+        <Route path="/Logout" element={<Logout />} />
+        <Route path="/Signup" element={<Signup />} />
+        <Route path="/Paydet" element={<Paydet />} />
+        <Route path="/Paymentsmethod" element={<Paymentsmethod />} />
       </Routes>
     </div>
   );

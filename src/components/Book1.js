@@ -1,66 +1,34 @@
 import React, { useState } from "react";
+import html2canvas from "html2canvas";
 
-const Business3 = () => {
-  const [pool, setPool] = useState("");
-  const [party, setParty] = useState("");
-  const [location, setLocation] = useState("");
+const Book1 = () => {
+  const [book, setBook] = useState("");
+  const [author, setAuthor] = useState("");
   const [date, setDate] = useState("");
-  const [food, setFood] = useState("");
-  const [phone, setPhone] = useState("");
-  const [freeMusic, setFreeMusic] = useState("");
-  const [dressCode, setDressCode] = useState("");
+  const [pages, setPages] = useState("");
+  const [producer, setProducer] = useState("");
   const [color, setColor] = useState("#000000");
 
-  const handleTextChange = (event) => {
-    setPool(event.target.value);
-  };
-  const handleTextChangea = (event) => {
-    setParty(event.target.value);
-  };
-  const handleTextChangeb = (event) => {
-    setLocation(event.target.value);
-  };
   const handleTextChangec = (event) => {
     setDate(event.target.value);
   };
   const handleTextChanged = (event) => {
-    setFood(event.target.value);
+    setBook(event.target.value);
   };
   const handleTextChangee = (event) => {
-    setPhone(event.target.value);
+    setAuthor(event.target.value);
   };
   const handleTextChangef = (event) => {
-    setFreeMusic(event.target.value);
+    setPages(event.target.value);
   };
   const handleTextChangeg = (event) => {
-    setDressCode(event.target.value);
+    setProducer(event.target.value);
   };
 
   const handleColorChange = (event) => {
     setColor(event.target.value);
   };
 
-  const handleCapitalizeText = () => {
-    setPool(pool.toUpperCase());
-  };
-
-  const handleEraseText = () => {
-    setPool("");
-  };
-  const handleCapitalizeTexta = () => {
-    setParty(party.toUpperCase());
-  };
-
-  const handleEraseTexta = () => {
-    setParty("");
-  };
-  const handleCapitalizeTextb = () => {
-    setLocation(location.toUpperCase());
-  };
-
-  const handleEraseTextb = () => {
-    setLocation("");
-  };
   const handleCapitalizeTextc = () => {
     setDate(date.toUpperCase());
   };
@@ -69,35 +37,35 @@ const Business3 = () => {
     setDate("");
   };
   const handleCapitalizeTextd = () => {
-    setFood(food.toUpperCase());
+    setBook(book.toUpperCase());
   };
 
   const handleEraseTextd = () => {
-    setFood("");
+    setBook("");
   };
   const handleCapitalizeTexte = () => {
-    setPhone(phone.toUpperCase());
+    setAuthor(author.toUpperCase());
   };
 
   const handleEraseTexte = () => {
-    setPhone("");
+    setAuthor("");
   };
   const handleCapitalizeTextf = () => {
-    setFreeMusic(freeMusic.toUpperCase());
+    setPages(pages.toUpperCase());
   };
 
   const handleEraseTextf = () => {
-    setFreeMusic("");
+    setPages("");
   };
   const handleCapitalizeTextg = () => {
-    setDressCode(dressCode.toUpperCase());
+    setProducer(producer.toUpperCase());
   };
 
   const handleEraseTextg = () => {
-    setDressCode("");
+    setProducer("");
   };
   const [backgroundImage, setBackgroundImage] = useState(
-    "https://i.pinimg.com/736x/07/ce/e6/07cee6b16fd091a49721bc82fd3d981d.jpg"
+    "https://png.pngtree.com/png-clipart/20211017/original/pngtree-simple-and-elegant-cover-design-perfect-for-book-covers-portfolios-png-image_6857715.png"
   );
 
   const handleSelectChange = (event) => {
@@ -105,19 +73,34 @@ const Business3 = () => {
     setBackgroundImage(selectedUrl);
   };
 
+  const handleCaptureScreenshot = () => {
+    const element = document.getElementById("divToCapture");
+
+    window.scrollTo(0, 0); // Scroll to the top of the page
+
+    html2canvas(element).then((canvas) => {
+      const screenshot = canvas.toDataURL("image/png");
+
+      const link = document.createElement("a");
+      link.href = screenshot;
+      link.download = "screenshot.png";
+      link.click();
+    });
+  };
   return (
     <div className="w-full">
       <div
+        id="divToCapture"
         style={{
           backgroundImage: `url(${backgroundImage})`,
           backgroundSize: "cover",
           backgroundRepeat: "repeat",
           height: "100%",
-          width: "90%",
+          width: "100%",
         }}
       >
         <select onChange={handleSelectChange}>
-          <option value="https://i.pinimg.com/736x/07/ce/e6/07cee6b16fd091a49721bc82fd3d981d.jpg">
+          <option value="https://png.pngtree.com/png-clipart/20211017/original/pngtree-simple-and-elegant-cover-design-perfect-for-book-covers-portfolios-png-image_6857715.png">
             Initial Background
           </option>
           <option value="https://i.pinimg.com/originals/13/2d/ff/132dff0e9767b7ae0f478e3b02d532fa.png">
@@ -130,51 +113,83 @@ const Business3 = () => {
             Background 3
           </option>
         </select>
-        <div className="flex pt-6 pl-4  ">
-          <div style={{ color }}>{pool.length === 0 ? "POOL" : pool}</div>
-          <div style={{ color, marginLeft: "15px" }}>
-            {party.length === 0 ? "PARTY" : party}
+        <div className=" pt-6 pl-4  ">
+          <div
+            style={{
+              color,
+              marginLeft: "45px",
+              marginTop: "30px",
+              fontWeight: "bolder",
+              fontSize: "54px",
+            }}
+          >
+            {book.length === 0 ? "BOOK NAME" : book}
           </div>
-          <div style={{ color, marginLeft: "100px", fontWeight: "bolder" }}>
-            {date.length === 0 ? "CHOOSE DATE" : date}
+          <div
+            style={{
+              color,
+              marginLeft: "40px",
+              marginTop: "90px",
+              fontWeight: "bolder",
+              fontSize: "42px",
+            }}
+          >
+            {author.length === 0 ? "AUTHOR NAME" : author}
+          </div>
+          <div
+            style={{
+              color,
+              marginLeft: "14px",
+              marginTop: "30px",
+              fontWeight: "bolder",
+              fontSize: "22px",
+            }}
+          >
+            {date.length === 0 ? "CHOOSE DATE OF PUBLISH" : date}
+          </div>
+          <div
+            style={{
+              color,
+              marginLeft: "14px",
+              marginTop: "30px",
+              fontWeight: "bolder",
+              fontSize: "22px",
+            }}
+          >
+            {pages.length === 0 ? "NO OF PAGES" : pages}
+          </div>
+          <div
+            style={{
+              color,
+              marginLeft: "14px",
+              marginTop: "30px",
+              fontWeight: "bolder",
+              fontSize: "22px",
+            }}
+          >
+            {producer.length === 0 ? "PRODUCED BY " : producer}
           </div>
         </div>
-        <div style={{ color, marginLeft: "20px", marginTop: "20px" }}>
-          {location.length === 0 ? "LOCATION" : location}
-        </div>
-        <div style={{ color, marginLeft: "20px", marginTop: "104px" }}>
-          {food.length === 0 ? "ENTER YOUR FOOD" : food}
-        </div>
-        <div style={{ color, marginLeft: "20px", marginTop: "20px" }}>
-          {phone.length === 0 ? "ENTER YOUR PHONE:NO" : phone}
-        </div>
-        <div style={{ color, marginLeft: "20px", marginTop: "20px" }}>
-          {freeMusic.length === 0 ? "WE OFFER FREE MUSIC" : freeMusic}
-        </div>
-        <div style={{ color, marginLeft: "20px", marginTop: "20px" }}>
-          {dressCode.length === 0 ? "ENTER YOUR Dress Code " : dressCode}
-        </div>
-      </div>
-      <div>
-        <div className="bw4">
-          <div className="">
+        <div></div>
+        <div className="aw1">
+          <div>
             <input
               className="w-1/2"
               type="text"
               placeholder="Enter Text"
               id="text-input"
-              value={pool}
-              onChange={handleTextChange}
+              value={book}
+              onChange={handleTextChanged}
             />
 
             <button
-              onClick={handleCapitalizeText}
-              className="bg-[#696969] text-black ml-3 "
+              onClick={handleCapitalizeTextd}
+              className="bg-[#696969]  ml-3 text-black "
             >
               Capitalize Text
             </button>
             <button
-              onClick={handleEraseText}
+              onClick={handleEraseTextd}
               className="bg-[#696969]  ml-3 text-black "
             >
               Erase Text
@@ -186,41 +201,18 @@ const Business3 = () => {
               type="text"
               placeholder="Enter Text"
               id="text-input"
-              value={party}
-              onChange={handleTextChangea}
+              value={author}
+              onChange={handleTextChangee}
             />
 
             <button
-              onClick={handleCapitalizeTexta}
+              onClick={handleCapitalizeTexte}
               className="bg-[#696969]  ml-3 text-black "
             >
               Capitalize Text
             </button>
             <button
-              onClick={handleEraseTexta}
-              className="bg-[#696969]  ml-3 text-black "
-            >
-              Erase Text
-            </button>
-          </div>
-          <div>
-            <input
-              className="w-1/2"
-              type="text"
-              placeholder="Enter Text"
-              id="text-input"
-              value={location}
-              onChange={handleTextChangeb}
-            />
-
-            <button
-              onClick={handleCapitalizeTextb}
-              className="bg-[#696969]  ml-3 text-black "
-            >
-              Capitalize Text
-            </button>
-            <button
-              onClick={handleEraseTextb}
+              onClick={handleEraseTexte}
               className="bg-[#696969]  ml-3 text-black "
             >
               Erase Text
@@ -255,53 +247,7 @@ const Business3 = () => {
               type="text"
               placeholder="Enter Text"
               id="text-input"
-              value={food}
-              onChange={handleTextChanged}
-            />
-
-            <button
-              onClick={handleCapitalizeTextd}
-              className="bg-[#696969]  ml-3 text-black "
-            >
-              Capitalize Text
-            </button>
-            <button
-              onClick={handleEraseTextd}
-              className="bg-[#696969]  ml-3 text-black "
-            >
-              Erase Text
-            </button>
-          </div>
-          <div>
-            <input
-              className="w-1/2"
-              type="text"
-              placeholder="Enter Text"
-              id="text-input"
-              value={phone}
-              onChange={handleTextChangee}
-            />
-
-            <button
-              onClick={handleCapitalizeTexte}
-              className="bg-[#696969]  ml-3 text-black "
-            >
-              Capitalize Text
-            </button>
-            <button
-              onClick={handleEraseTexte}
-              className="bg-[#696969]  ml-3 text-black "
-            >
-              Erase Text
-            </button>
-          </div>
-          <div>
-            <input
-              className="w-1/2"
-              type="text"
-              placeholder="Enter Text"
-              id="text-input"
-              value={freeMusic}
+              value={pages}
               onChange={handleTextChangef}
             />
 
@@ -324,7 +270,7 @@ const Business3 = () => {
               type="text"
               placeholder="Enter Text"
               id="text-input"
-              value={dressCode}
+              value={producer}
               onChange={handleTextChangeg}
             />
 
@@ -349,8 +295,9 @@ const Business3 = () => {
           <input type="color" id="color-picker" onChange={handleColorChange} />
         </div>{" "}
       </div>
+      <button onClick={handleCaptureScreenshot}>Save as</button>
     </div>
   );
 };
 
-export default Business3;
+export default Book1;

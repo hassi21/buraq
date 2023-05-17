@@ -5,9 +5,12 @@ import p3 from "./../pictures/p3.png";
 import p4 from "./../pictures/p4.jpg";
 import p5 from "./../pictures/p5.png";
 import p6 from "./../pictures/p6.png";
+import Navbar from "./Navbar";
 const Novels = () => {
   return (
     <div>
+      <Navbar />
+
       <section className="text-gray-600 bg-[#696969] body-font">
         <div className="container px-5 py-24 mx-auto">
           <div className="flex flex-col text-center w-full mb-20">
