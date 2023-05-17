@@ -1,12 +1,39 @@
 import React, { useState } from "react";
 import lg from "./../pictures/lg.jpg";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+// import { Link, } from "react-router-dom";
+import { isLogin, login } from "../services/api/userAuth";
 const Login = () => {
+  const navigate = useNavigate();
+
   const [isLoginVisible, setIsLoginVisible] = useState(true);
 
   const handleSignupButtonClick = () => {
-    setIsLoginVisible(false);
+    // e.preventDefault();
+    // console.log("clicked");
+    // const response = await login();
+    // setIsLoginVisible(false);
   };
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    var { email, password } = e.target.elements;
+    email = email.value;
+    password = password.value;
+
+    console.log("clicked", email, password, process.env.REACT_APP_API_URL);
+    try {
+      const response = await login(email, password);
+      if (response.data.success) {
+        localStorage.setItem("user", JSON.stringify(response.data.data));
+        setIsLoginVisible(false);
+        navigate("/home");
+      }
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
   return (
     <div>
       {isLoginVisible && (
@@ -24,7 +51,11 @@ const Login = () => {
                 <h1 className="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white">
                   Sign in to your account
                 </h1>
-                <form className="space-y-4 md:space-y-6" action="#">
+                <form
+                  className="space-y-4 md:space-y-6"
+                  action="#"
+                  onSubmit={handleSubmit}
+                >
                   <div>
                     <label
                       for="email"
@@ -38,7 +69,7 @@ const Login = () => {
                       id="email"
                       className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                       placeholder="name@company.com"
-                      required=""
+                      required
                     />
                   </div>
                   <div>
@@ -54,7 +85,7 @@ const Login = () => {
                       id="password"
                       placeholder="••••••••"
                       className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                      required=""
+                      required
                     />
                   </div>
                   <div className="flex items-center justify-between">
@@ -84,19 +115,30 @@ const Login = () => {
                       Forgot password?
                     </a>
                   </div>
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-start">
+                      <div className="ml-3 text-sm"></div>
+                    </div>
+                    <a
+                      href="/register"
+                      className="text-sm font-medium text-primary-600 hover:underline dark:text-primary-500"
+                    >
+                      Register?
+                    </a>
+                  </div>
 
-                  <Link
+                  {/* <Link
                     to={"/Home"}
                     className="font-medium text-primary-600 hover:underline dark:text-primary-500"
+                  > */}
+                  <button
+                    type="submit"
+                    // onClick={handleSignupButtonClick}
+                    className="w-full text-white bg-primary-600 hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
                   >
-                    <button
-                      type="submit"
-                      onClick={handleSignupButtonClick}
-                      className="w-full text-white bg-primary-600 hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
-                    >
-                      Sign ins
-                    </button>
-                  </Link>
+                    Sign in
+                  </button>
+                  {/* </Link> */}
                 </form>
               </div>
             </div>

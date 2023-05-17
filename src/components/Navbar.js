@@ -33,9 +33,12 @@ const Navbar = () => {
                 Billing
               </button>
             </Link>
-            <button className="inline-flex items-center bg-[#F6C562] ml-5 border-0 py-3 px-2 focus:outline-none hover:bg-[#F6C562] rounded text-base mt-4 md:mt-0">
-              Logout
-            </button>
+
+            <Link to={"/login"}>
+              <button className="inline-flex items-center bg-[#F6C562] ml-5 border-0 py-3 px-2 focus:outline-none hover:bg-[#F6C562] rounded text-base mt-4 md:mt-0">
+                Logout
+              </button>
+            </Link>
           </div>
         </header>
       </div>
