@@ -13,6 +13,8 @@
     "bootstrap": "^5.2.3",
     "flowbite": "^1.6.5",
     "formik": "^2.2.9",
+    "html2canvas": "^1.4.1",
+    "html2pdf.js": "^0.10.1",
     "mdb-react-ui-kit": "^6.0.0",
     "react": "^18.2.0",
     "react-bootstrap": "^2.7.4",

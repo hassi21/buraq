@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import html2canvas from "html2canvas";
 
 const Book1 = () => {
   const [book, setBook] = useState("");
@@ -72,9 +73,24 @@ const Book1 = () => {
     setBackgroundImage(selectedUrl);
   };
 
+  const handleCaptureScreenshot = () => {
+    const element = document.getElementById("divToCapture");
+
+    window.scrollTo(0, 0); // Scroll to the top of the page
+
+    html2canvas(element).then((canvas) => {
+      const screenshot = canvas.toDataURL("image/png");
+
+      const link = document.createElement("a");
+      link.href = screenshot;
+      link.download = "screenshot.png";
+      link.click();
+    });
+  };
   return (
     <div className="w-full">
       <div
+        id="divToCapture"
         style={{
           backgroundImage: `url(${backgroundImage})`,
           backgroundSize: "cover",
@@ -154,136 +170,132 @@ const Book1 = () => {
             {producer.length === 0 ? "PRODUCED BY " : producer}
           </div>
         </div>
-        <div>
-          <div className="aw1">
-            <div>
-              <input
-                className="w-1/2"
-                type="text"
-                placeholder="Enter Text"
-                id="text-input"
-                value={book}
-                onChange={handleTextChanged}
-              />
-
-              <button
-                onClick={handleCapitalizeTextd}
-                className="bg-[#696969]  ml-3 text-black "
-              >
-                Capitalize Text
-              </button>
-              <button
-                onClick={handleEraseTextd}
-                className="bg-[#696969]  ml-3 text-black "
-              >
-                Erase Text
-              </button>
-            </div>
-            <div>
-              <input
-                className="w-1/2"
-                type="text"
-                placeholder="Enter Text"
-                id="text-input"
-                value={author}
-                onChange={handleTextChangee}
-              />
-
-              <button
-                onClick={handleCapitalizeTexte}
-                className="bg-[#696969]  ml-3 text-black "
-              >
-                Capitalize Text
-              </button>
-              <button
-                onClick={handleEraseTexte}
-                className="bg-[#696969]  ml-3 text-black "
-              >
-                Erase Text
-              </button>
-            </div>
-            <div>
-              <input
-                className="w-1/2"
-                type="date"
-                placeholder="Enter Text"
-                id="text-input"
-                value={date}
-                onChange={handleTextChangec}
-              />
-
-              <button
-                onClick={handleCapitalizeTextc}
-                className="bg-[#696969]  ml-3 text-black "
-              >
-                Capitalize Text
-              </button>
-              <button
-                onClick={handleEraseTextc}
-                className="bg-[#696969]  ml-3 text-black "
-              >
-                Erase Text
-              </button>
-            </div>
-            <div>
-              <input
-                className="w-1/2"
-                type="text"
-                placeholder="Enter Text"
-                id="text-input"
-                value={pages}
-                onChange={handleTextChangef}
-              />
-
-              <button
-                onClick={handleCapitalizeTextf}
-                className="bg-[#696969]  ml-3 text-black "
-              >
-                Capitalize Text
-              </button>
-              <button
-                onClick={handleEraseTextf}
-                className="bg-[#696969]  ml-3 text-black "
-              >
-                Erase Text
-              </button>
-            </div>
-            <div>
-              <input
-                className="w-1/2"
-                type="text"
-                placeholder="Enter Text"
-                id="text-input"
-                value={producer}
-                onChange={handleTextChangeg}
-              />
-
-              <button
-                onClick={handleCapitalizeTextg}
-                className="bg-[#696969]  ml-3 text-black "
-              >
-                Capitalize Text
-              </button>
-              <button
-                onClick={handleEraseTextg}
-                className="bg-[#696969]  ml-3 text-black "
-              >
-                Erase Text
-              </button>
-            </div>
-          </div>
-          <div className="ml-4 p-8 flex">
-            <p className="text-2xl mr-5 text-black  ">
-              change the color theme of card
-            </p>
+        <div></div>
+        <div className="aw1">
+          <div>
             <input
-              type="color"
-              id="color-picker"
-              onChange={handleColorChange}
+              className="w-1/2"
+              type="text"
+              placeholder="Enter Text"
+              id="text-input"
+              value={book}
+              onChange={handleTextChanged}
             />
-          </div>{" "}
+
+            <button
+              onClick={handleCapitalizeTextd}
+              className="bg-[#696969]  ml-3 text-black "
+            >
+              Capitalize Text
+            </button>
+            <button
+              onClick={handleEraseTextd}
+              className="bg-[#696969]  ml-3 text-black "
+            >
+              Erase Text
+            </button>
+          </div>
+          <div>
+            <input
+              className="w-1/2"
+              type="text"
+              placeholder="Enter Text"
+              id="text-input"
+              value={author}
+              onChange={handleTextChangee}
+            />
+
+            <button
+              onClick={handleCapitalizeTexte}
+              className="bg-[#696969]  ml-3 text-black "
+            >
+              Capitalize Text
+            </button>
+            <button
+              onClick={handleEraseTexte}
+              className="bg-[#696969]  ml-3 text-black "
+            >
+              Erase Text
+            </button>
+          </div>
+          <div>
+            <input
+              className="w-1/2"
+              type="date"
+              placeholder="Enter Text"
+              id="text-input"
+              value={date}
+              onChange={handleTextChangec}
+            />
+
+            <button
+              onClick={handleCapitalizeTextc}
+              className="bg-[#696969]  ml-3 text-black "
+            >
+              Capitalize Text
+            </button>
+            <button
+              onClick={handleEraseTextc}
+              className="bg-[#696969]  ml-3 text-black "
+            >
+              Erase Text
+            </button>
+          </div>
+          <div>
+            <input
+              className="w-1/2"
+              type="text"
+              placeholder="Enter Text"
+              id="text-input"
+              value={pages}
+              onChange={handleTextChangef}
+            />
+
+            <button
+              onClick={handleCapitalizeTextf}
+              className="bg-[#696969]  ml-3 text-black "
+            >
+              Capitalize Text
+            </button>
+            <button
+              onClick={handleEraseTextf}
+              className="bg-[#696969]  ml-3 text-black "
+            >
+              Erase Text
+            </button>
+          </div>
+          <div>
+            <input
+              className="w-1/2"
+              type="text"
+              placeholder="Enter Text"
+              id="text-input"
+              value={producer}
+              onChange={handleTextChangeg}
+            />
+
+            <button
+              onClick={handleCapitalizeTextg}
+              className="bg-[#696969]  ml-3 text-black "
+            >
+              Capitalize Text
+            </button>
+            <button
+              onClick={handleEraseTextg}
+              className="bg-[#696969]  ml-3 text-black "
+            >
+              Erase Text
+            </button>
+          </div>
         </div>
+        <div className="ml-4 p-8 flex">
+          <p className="text-2xl mr-5 text-black  ">
+            change the color theme of card
+          </p>
+          <input type="color" id="color-picker" onChange={handleColorChange} />
+        </div>{" "}
       </div>
+      <button onClick={handleCaptureScreenshot}>Save as</button>
     </div>
   );
 };

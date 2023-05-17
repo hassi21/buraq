@@ -26,10 +26,8 @@ const Signup = () => {
                   className="mb-4 opacity-70"
                   style={{ color: "hsl(218, 81%, 85%)" }}
                 >
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Temporibus, expedita iusto veniam atque, magni tempora
-                  mollitia dolorum consequatur nulla, neque debitis eos
-                  reprehenderit quasi ab ipsum nisi dolorem modi. Quos?
+                  We heartly Welcome you to our printing Press <br />
+                  Your Satisfaction will be our first and foremost PRIORITY
                 </p>
               </div>
 

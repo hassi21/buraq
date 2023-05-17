@@ -5,7 +5,7 @@ import Ford from "./../pictures/Ford.jpg";
 import { Rating, Typography } from "@mui/material";
 import Navbar from "./Navbar";
 const Magazine = () => {
-  const [value, setValue] = useState("*");
+  const [value, setValue] = useState("");
   return (
     <div>
       <Navbar />

@@ -7,7 +7,7 @@ const Contact = () => {
 
       <div>
         <section className="text-gray-600 body-font relative">
-          <div className="container px-5 py-24 mx-auto flex sm:flex-nowrap flex-wrap">
+          <div className="container px-5 py-24 flex-col mx-auto flex sm:flex-nowrap flex-wrap">
             <div className="lg:w-2/3 md:w-1/2 bg-gray-300 rounded-lg overflow-hidden sm:mr-10 p-10 flex items-end justify-start relative">
               <iframe
                 width="100%"
@@ -33,12 +33,12 @@ const Contact = () => {
                     EMAIL
                   </h2>
                   <a href="/" className="text-indigo-500 leading-relaxed">
-                    example@email.com
+                    Alburaq@gmail.com
                   </a>
                   <h2 className="title-font font-semibold text-gray-900 tracking-widest text-xs mt-4">
                     PHONE
                   </h2>
-                  <p className="leading-relaxed">123-456-7890</p>
+                  <p className="leading-relaxed">03016804166</p>
                 </div>
               </div>
             </div>
@@ -46,9 +46,7 @@ const Contact = () => {
               <h2 className="text-gray-900 text-lg mb-1 font-medium title-font">
                 Feedback
               </h2>
-              <p className="leading-relaxed mb-5 text-gray-600">
-                Post-ironic portland shabby chic echo park, banjo fashion axe
-              </p>
+
               <div className="relative mb-4">
                 <label for="name" class="leading-7 text-sm text-gray-600">
                   Name
@@ -82,12 +80,8 @@ const Contact = () => {
                 ></textarea>
               </div>
               <button className="text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">
-                Button
+                submit
               </button>
-              <p className="text-xs text-gray-500 mt-3">
-                Chicharrones blog helvetica normcore iceland tousled brook viral
-                artisan.
-              </p>
             </div>
           </div>
         </section>

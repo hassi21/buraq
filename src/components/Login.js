@@ -23,9 +23,6 @@ const Login = () => {
                       <div className="card-body p-md-5 mx-md-4">
                         <div className="text-center">
                           <img src={lg} style={{ width: "185px" }} alt="logo" />
-                          <h4 className="mt-1 mb-5 pb-1">
-                            We are The Lotus Team
-                          </h4>
                         </div>
 
                         <form>
@@ -90,11 +87,9 @@ const Login = () => {
                           We are more than just a company
                         </h4>
                         <p className="small mb-0">
-                          Lorem ipsum dolor sit amet, consectetur adipisicing
-                          elit, sed do eiusmod tempor incididunt ut labore et
-                          dolore magna aliqua. Ut enim ad minim veniam, quis
-                          nostrud exercitation ullamco laboris nisi ut aliquip
-                          ex ea commodo consequat.
+                          We heartly Welcome you to our printing Press <br />
+                          Your Satisfaction will be our first and foremost
+                          PRIORITY
                         </p>
                       </div>
                     </div>
