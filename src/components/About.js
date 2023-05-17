@@ -1,16 +1,12 @@
 import React from "react";
 import Navbar from "./Navbar";
-import Paydet from "./Paydet";
-import Paymentsmethod from "./Paymentsmethod";
 
 const About = () => {
   return (
     <div>
       <Navbar />
-      <Paymentsmethod />
-      {/* <Paydet /> */}
 
-      {/* <h1 className=" bg-[#696969] text-white text-4xl font-bold pt-8 pl-4">
+      <h1 className=" bg-[#696969] text-white text-4xl font-bold pt-8 pl-4">
         Our Priorities:
       </h1>
       <div className="flex bg-[#696969] text-center font-semibold pt-8 pb-4 justify-around">
@@ -97,7 +93,7 @@ const About = () => {
             </div>
           </div>
         </div>
-      </section> */}
+      </section>
     </div>
   );
 };
